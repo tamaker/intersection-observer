@@ -13,7 +13,7 @@ $(document).ready(function () {
                      .css('background-color', newClr)
                      .attr('data-color', newClr);
                   
-                  console.log(newClr);
+                  //console.log(newClr);
             }, 1000)
             
             
@@ -44,7 +44,7 @@ $(document).ready(function () {
       // LAZY LOAD IMAGES USING INTERSECTION OBSERVER API -- makes use of /js/lazyload_images.js
       $('.divBox').each(function(cdi, cdival){
          imageObserver.observe(cdival);
-         console.log(cdi)
+         //console.log(cdi)
       })
    
 });
