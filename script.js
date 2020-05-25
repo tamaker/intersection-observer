@@ -8,7 +8,11 @@ $(document).ready(function () {
             const lazyImage = entry.target
             setTimeout(function(){
                   var newClr = '#'+getColor();
-                  $(lazyImage).css('background-color', newClr);
+                  
+                  $(lazyImage)
+                     .css('background-color', newClr)
+                     .attr('data-color', newClr);
+                  
                   console.log(newClr);
             }, 1000)
             
@@ -23,12 +27,11 @@ $(document).ready(function () {
    
    function getColor() {
       var randoColor = Math.floor(Math.random() * 16777215).toString(16);
-     
       return Math.floor(Math.random() * 16777215).toString(16);
    }
    for (i = 0; i < 300; i++) {
 
-      setTimeout(function(){
+
          $("#wrapper").append(
             '<div class="divBox" id="div' +
                i +
@@ -36,7 +39,6 @@ $(document).ready(function () {
                i +
                "</div>"
          );
-      }(i))
 
    }
       // LAZY LOAD IMAGES USING INTERSECTION OBSERVER API -- makes use of /js/lazyload_images.js
