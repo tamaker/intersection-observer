@@ -12,11 +12,7 @@ $(document).ready(function () {
                   $(lazyImage)
                      .css('background-color', newClr)
                      .attr('data-color', newClr);
-                  
-                  //console.log(newClr);
             }, 1000)
-            
-            
          }
       })
    });
